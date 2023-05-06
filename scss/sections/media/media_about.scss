@@ -1,0 +1,56 @@
+    /*-----media section About--------*/
+    
+    @media all and (max-width: 991px) {
+        .page {
+            &__about {}
+        }
+        .about {
+            &__container {
+                flex-direction: column;
+            }
+            &__text {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                row-gap: 10px;
+                padding: 1rem;
+                margin-left: 0rem !important;
+            }
+            &__img {}
+            &__imgTable {
+                max-width: 100%;
+            }
+            &__moonSun {
+                display: none;
+            }
+            &__moon,
+            &__sun {
+                bottom: 0rem;
+            }
+        }
+        .text {
+            &__title {
+                text-align: center;
+            }
+            &__subtitle {
+                text-align: center;
+            }
+            &__inputBox {
+                justify-content: center;
+            }
+            &__moonSun {
+                display: block !important;
+            }
+        }
+    }
+    
+    @media all and (max-width: 320px) {
+        .text {
+            &__inputBox {
+                flex-direction: column;
+            }
+        }
+        .button_try {
+            width: calc(100/16) + rem !important;
+        }
+    }

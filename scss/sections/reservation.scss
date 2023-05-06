@@ -1,0 +1,132 @@
+/*-----Reservation--------*/
+
+.reservation {
+    &__container {
+        margin-top: calc(75/16) + rem;
+        padding-bottom: 1rem;
+    }
+    &__imgKit1 {
+        padding: 1.5rem;
+    }
+    &__imgKit2 {
+        display: flex;
+        flex-direction: column;
+        column-gap: 100px;
+        padding: 1.5rem;
+        flex: 1 0 32%
+    }
+    &__img1 {
+        width: 150%;
+    }
+    &__img2 {
+        width: 180%;
+        flex: 0 1 20%;
+    }
+    &__img3 {
+        width: 110%;
+        flex: 0 1 auto;
+        margin-top: -12rem;
+    }
+    &__content {
+        flex: 1 0 40%;
+        padding: 0 1.5rem;
+        position: relative;
+        &::after {
+            content: "";
+            background-image: url('../img/img4.png');
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-size: contain;
+            padding: 1.5rem;
+            left: 14rem;
+            bottom: 1rem;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 2rem;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+        background-color: rgba(21, 21, 21, 0);
+        border-radius: 2px;
+        position: relative;
+        color: white;
+        &::before {
+            content: "*terms & conditions applied .";
+            color: white;
+            font-size: 10px;
+            font-weight: 400;
+            text-align: end;
+            position: absolute;
+            top: -2rem;
+            right: 0;
+        }
+    }
+}
+
+.form {
+    &__title {
+        color: #DDDDDD;
+        font-size: calc(35/16) + rem;
+        line-height: calc(20/16);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+    &__subtitle {
+        font-size: calc(9/16) + rem;
+        line-height: calc(18/16);
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+        text-transform: capitalize;
+        text-align: center;
+        margin-top: 7px;
+    }
+    &__inputBox {
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: center;
+        column-gap: 5%;
+    }
+    .inputBox_first {
+        margin-top: 200px;
+    }
+    &__inputValue {
+        flex: 1 0 auto;
+        margin-right: 1rem;
+    }
+    &__input {
+        font-size: 16px;
+        line-height: calc(20/16);
+        font-weight: 400;
+        background: rgba(21, 21, 21, 0.8);
+        border-bottom: 1px dashed white;
+        width: 100%;
+        color: black;
+        font-weight: 600;
+        position: relative;
+        z-index: 7;
+    }
+}
+
+.button {
+    &_mailSend {
+        padding-left: 30px;
+        padding-right: 30px;
+        align-items: center;
+        margin-top: 35px;
+        position: relative;
+        z-index: 7;
+    }
+    &_resetSend {
+        padding-left: 30px;
+        padding-right: 30px;
+        align-items: center;
+        margin-top: 35px;
+        position: relative;
+        z-index: 7;
+    }
+}

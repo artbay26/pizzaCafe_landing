@@ -1,0 +1,86 @@
+/*-----Section About--------*/
+
+.about {
+    &__container {
+        margin-top: calc(20/16) + rem;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 40%;
+        align-self: center;
+        padding: 1.5rem;
+        row-gap: 60px;
+    }
+    &__imgTable {
+        max-width: 100%;
+        box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+    &__moonSun {
+        position: relative;
+        height: 72px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.moonSun {
+    &__moon,
+    &__sun {
+        height: 100%;
+        width: 89px;
+        position: absolute;
+        right: 0rem;
+        top: -4rem;
+        img {
+            transition: transform 0.25s;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.text {
+    &__title {
+        font-weight: 600;
+        font-size: calc(48/16) + rem;
+        line-height: calc(60/16) + rem;
+        color: #FF8C42;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: calc(18/16) + rem;
+        line-height: calc(22/16) + rem;
+        text-transform: capitalize;
+        color: #FF8C42;
+    }
+    &__inputBox {
+        display: flex;
+        column-gap: 0.5%;
+        row-gap: 1rem;
+    }
+    &__inputLocation {
+        max-width: 100%;
+        height: 36px;
+        border: 2px solid #FF8C42;
+        border-radius: 3px;
+        cursor: pointer;
+        background: #151515;
+        color: white;
+    }
+    &__moonSun {
+        display: none;
+        position: relative;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.button_try {
+    font-size: calc(20/16) + rem;
+    line-height: calc(26/16) + rem;
+    padding: 10px 10px;
+    width: calc(190/16) + rem;
+}

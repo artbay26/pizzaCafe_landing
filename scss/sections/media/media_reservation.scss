@@ -1,0 +1,41 @@
+     /*-----media section Reservetion--------*/
+     
+     @media all and (max-width: 991px) {
+         .reservation {
+             &__img3 {
+                 margin-top: -9rem !important;
+             }
+         }
+     }
+     
+     @media all and (max-width: 768px) {
+         .reservation {
+             &__imgKit1 {
+                 display: none !important;
+             }
+             &__imgKit2 {
+                 display: none !important;
+             }
+             &__content {
+                 width: 100%;
+             }
+             &__content {
+                 &::after {
+                     left: 30rem !important;
+                     bottom: 0rem !important;
+                 }
+             }
+         }
+         .form {
+             &__title {
+                 font-size: 1.2rem !important;
+             }
+             &__inputBox {
+                 flex-direction: column !important;
+                 align-items: center;
+             }
+             .inputBox_first {
+                 margin-top: 130px !important;
+             }
+         }
+     }

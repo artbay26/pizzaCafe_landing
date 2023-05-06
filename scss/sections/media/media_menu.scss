@@ -1,0 +1,86 @@
+/*-----media section Menu--------*/
+
+@media all and (max-width: 991px) {
+    .menu {
+        &__img {
+            img {
+                margin-top: 140px !important;
+            }
+        }
+    }
+    .text {
+        &__titleMenu {
+            width: 68%;
+        }
+        &__box {
+            display: flex !important;
+            flex-direction: column;
+            padding-top: 10px !important;
+            align-items: start;
+        }
+        &__boxButton {
+            width: 68%!important;
+        }
+    }
+    .button_menu {}
+    .box {
+        &__slice1,
+        &__slice2,
+        &__gourmet {
+            width: fit-content;
+        }
+    }
+    .slice {
+        &__items {}
+        &__item {
+            margin-top: 15px !important;
+        }
+        &__name {
+            text-align: start;
+        }
+        &__price {
+            text-align: end;
+        }
+    }
+    .gourmet {
+        width: fit-content;
+        &__item {
+            margin-top: 10px !important;
+        }
+        &__name {
+            text-align: start;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .menu {
+        &__container {
+            flex-direction: column;
+        }
+        &__img {
+            display: none;
+        }
+    }
+    .text {
+        &__titleMenu {
+            width: 100%;
+        }
+        &__boxButton {
+            width: 100%!important;
+        }
+    }
+    .box {
+        &__slice1,
+        &__slice2,
+        &__slice3,
+        &__gourmet {
+            width: 100%;
+        }
+    }
+    .gourmet {
+        &__price {
+            text-align: end;
+        }
+    }
+}

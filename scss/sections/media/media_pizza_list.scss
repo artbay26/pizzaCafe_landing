@@ -1,0 +1,56 @@
+            /*-----media section Pizza-list--------*/
+            
+            @media all and (max-width: 991px) {
+                .pzList {
+                    &__imgLine {
+                        display: none;
+                    }
+                }
+                .content {
+                    &__list {
+                        margin-top: 0rem !important;
+                    }
+                    &__buttons {
+                        margin-left: -12rem !important;
+                    }
+                }
+            }
+            
+            @media all and (max-width: 768px) {
+                .pzList {
+                    &__container {
+                        flex-direction: column;
+                    }
+                    &__imgHands {
+                        width: 100% !important;
+                    }
+                    &__content {
+                        width: 100%;
+                    }
+                }
+                .content {
+                    &__list {
+                        margin-top: 0rem !important;
+                        align-self: center;
+                    }
+                    &__list {
+                        margin-left: 0rem !important;
+                    }
+                    &__item {
+                        margin-left: 0rem !important;
+                    }
+                    &__buttons {
+                        margin-left: 0rem !important;
+                        align-self: center;
+                    }
+                }
+            }
+            
+            @media all and (max-width: 320px) {
+                .content {
+                    &__buttons {
+                        flex-direction: column;
+                        gap: 3rem;
+                    }
+                }
+            }

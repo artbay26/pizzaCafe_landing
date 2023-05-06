@@ -1,0 +1,125 @@
+/*----Menu---*/
+
+.menu {
+    &__container {
+        margin-top: calc(10/16) + rem;
+        padding-bottom: 1rem;
+        padding-left: 1.5rem;
+        color: #FFDDC8;
+    }
+    &__img {
+        img {
+            margin-top: 80px;
+        }
+    }
+    &__text {
+        flex: 1 0 75%;
+        display: flex;
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.text {
+    &__titleMenu {
+        font-family: 'Kaushan Script', cursive !important;
+        font-size: 76px;
+        color: #FF8C42;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    &__box {
+        display: grid;
+        grid-template-areas: 'slice1 gourmet' 'slice2 gourmet' 'slice3 gourmet';
+        grid-template-columns: repeat(2, minmax(210px, 1fr));
+        grid-auto-flow: dense;
+        grid-template-rows: 33.33% 33.33% 33.33%;
+        row-gap: 10px;
+        padding: 30px 15px;
+    }
+    &__boxButton {
+        width: 100%;
+    }
+}
+
+.button_menu {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.box {
+    &__subtitle {
+        font-size: 24px;
+        line-height: calc(24/16);
+        font-family: 'Kosugi', sans-serif !important;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    &__slice1 {
+        grid-area: slice1;
+    }
+    &__slice2 {
+        grid-area: slice2;
+    }
+    &__gourmet {
+        grid-area: gourmet;
+    }
+}
+
+.slice {
+    &__items {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    &__item {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: minmax(80px, 1fr) minmax(20px, 1fr) minmax(135px, 1fr);
+    }
+    &__name {
+        text-transform: capitalize;
+        text-align: left;
+    }
+    &__dots {
+        border-bottom: 3px dotted #FFDDC8;
+        width: 100%;
+    }
+    &__price {
+        padding-left: 1rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.gourmet {
+    &__items {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    &__item {
+        margin-top: 30px;
+        display: grid;
+        grid-template-areas: "name price" "descript price";
+        grid-template-columns: minmax(135px, 1fr) minmax(100px, 1fr);
+        grid-template-rows: 30% 70%;
+        row-gap: 10px;
+    }
+    &__name {
+        grid-area: name;
+        font-size: 20px;
+        line-height: calc(20/16);
+        text-transform: capitalize;
+    }
+    &__descript {
+        grid-area: descript;
+        font-size: 14px;
+        line-height: calc(20/16);
+        text-align: justify;
+    }
+    &__price {
+        grid-area: price;
+        font-size: 20px;
+        line-height: calc(20/16);
+        padding-right: 1.5rem;
+    }
+}

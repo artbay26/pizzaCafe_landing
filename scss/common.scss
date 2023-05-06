@@ -1,0 +1,110 @@
+body {
+    height: 100%;
+    width: 100%;
+    line-height: calc(20/16);
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    background: #151515;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    &_lock {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    flex: 1 1 auto;
+    padding-top: calc(75/16) + rem;
+}
+
+[class*="__container"] {
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 0 1rem;
+    display: flex;
+}
+
+[class*="__link"] {
+    cursor: pointer;
+    color: #FF8C42;
+    &:hover {
+        color: grey;
+        transition: 500ms;
+        @media all and (max-width: 768px) {
+            color: black;
+        }
+    }
+}
+
+.button {
+    padding: 8px 8px;
+    background: #FF8C42;
+    color: white;
+    border-radius: 5px;
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    &:hover {
+        background: #ff8a42b0;
+    }
+}
+
+._active {
+    display: block !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.textDecor {
+    color: red;
+    text-decoration: line-through;
+}
+
+
+/*----Toggle Background---*/
+
+.backWhite {
+    background: #F4F4F4 !important;
+}
+
+.elBackGray2 {
+    background: #E9E9E9 !important;
+}
+
+.elBackGray1 {
+    background: rgba(233, 233, 233, 0.5) !important;
+}
+
+.elFontBlack {
+    color: black !important;
+}
+
+.elFontBrown {
+    color: #7B3000 !important;
+}
+
+.elFontOrange {
+    color: #FF8C42 !important;
+}
+
+.elBorderBlack {
+    border-color: black !important;
+}
+
+.psElFontBlack::before {
+    color: var(--color, black) !important;
+}
+
+.psElBackGray::before {
+    background: var(--background, #F4F4F4) !important;
+}

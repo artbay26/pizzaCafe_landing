@@ -1,0 +1,394 @@
+/*-----Section Order--------*/
+
+%beforeUser {
+    background-size: 100%;
+    position: absolute;
+    left: -1.9rem;
+    top: 0.8rem;
+    width: 2.7rem;
+    height: 2.7rem;
+}
+
+%borderTL {
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-left: 2px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+%borderInputOder {
+    border: 1px solid #FF8C42;
+    border-radius: 5px;
+    background: rgba(68, 68, 68, 0.5);
+    color: white;
+}
+
+.order {
+    &__container {
+        color: white;
+        margin-top: calc(75/16) + rem;
+        gap: 5%;
+    }
+    &__user {
+        flex: 1 0 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 3rem;
+    }
+    &__details {
+        padding: 1rem;
+        width: calc(485/16) + rem;
+        position: relative;
+        &::after {
+            content: '';
+            display: block;
+            background: url("../img/Slice-pizza.png");
+            background-size: contain;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            position: absolute;
+            right: -165px;
+            bottom: -140px;
+            width: 400px;
+            height: 400px;
+        }
+    }
+}
+
+.user {
+    &__info {
+        background: rgba(68, 68, 68, 0.5);
+        @extend %borderTL;
+        margin-left: 2rem;
+        position: relative;
+    }
+}
+
+.info {
+    &__title {
+        font-size: 1.5rem;
+        line-height: calc(16/16);
+        font-weight: 700;
+        padding: 1.5rem;
+        &:hover {
+            color: #FF8C42;
+            cursor: pointer;
+        }
+    }
+    &__text {
+        font-size: calc(16/16) + rem;
+        line-height: calc(18/16);
+        padding: 1rem 1.5rem;
+        font-weight: 600;
+    }
+    &__buttons {
+        display: flex;
+        padding: 1rem 1.5rem;
+    }
+    &__button {
+        font-size: calc(10/16) + rem;
+        line-height: calc(16/16);
+        background: #444444;
+        border: 1px solid #FF8C42;
+        margin-right: 2rem;
+        font-weight: 600;
+        &:hover {
+            span {
+                color: #444444;
+            }
+        }
+    }
+    &_account {
+        &::before {
+            content: '';
+            background-image: url("../img/Users.png");
+            width: 2.5rem;
+            height: 2.5rem;
+            @extend %beforeUser;
+        }
+    }
+    &_location {
+        &::before {
+            content: '';
+            background-image: url("../img/Location.png");
+            @extend %beforeUser;
+        }
+    }
+    &_payment {
+        &::before {
+            content: '';
+            background-image: url("../img/Payment.png");
+            @extend %beforeUser;
+        }
+    }
+}
+
+.button {
+    &_signin {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    span {
+        color: #FF8C42;
+    }
+}
+
+.details {
+    &__box {
+        background: rgba(68, 68, 68, 0.5);
+        padding: 1rem;
+        @extend %borderTL;
+        position: relative;
+        z-index: 5;
+    }
+    &__delivery {
+        display: flex;
+        column-gap: 5%;
+        max-height: 120px;
+    }
+    &__choice {
+        margin-top: 9rem;
+    }
+    &__bill {
+        margin-top: 5rem;
+    }
+}
+
+.delivery {
+    &__imgBox {
+        position: relative;
+        width: 100%;
+    }
+    &__img {
+        position: absolute;
+        width: 80%;
+    }
+    &__infoBox {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 75%;
+        row-gap: 2rem;
+    }
+    &__titleBox {
+        position: relative;
+    }
+    &__title {
+        position: absolute;
+        font-size: calc(32/16) + rem;
+        font-weight: 600;
+    }
+}
+
+.choice {
+    &__message {
+        color: #F461A8;
+        ;
+    }
+}
+
+.select {
+    &__form {
+        margin-top: 110px;
+    }
+}
+
+.form {
+    &__pizza {
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        border-left: 2px solid #FF8C42
+    }
+    &__ingredients {
+        position: relative;
+        height: 32px;
+        border-left: 2px solid #FF8C42;
+    }
+    &__btnAdd {
+        font-size: 14px;
+        letter-spacing: 0.05px;
+        margin-top: 8px;
+    }
+    &__coupon {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.pizza {
+    &__list {
+        width: 150px;
+        height: 32px;
+        @extend %borderInputOder;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: left;
+        &:hover {
+            cursor: pointer;
+            background-color: #FF8C42;
+        }
+    }
+    select option:hover {
+        cursor: pointer;
+    }
+    &__counter {
+        display: flex;
+        max-width: 80px;
+    }
+    &__price {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.counter {
+    &__btn {
+        width: 25px;
+        height: 32px;
+        background: rgba(68, 68, 68, 0.5);
+        color: white;
+        text-align: center;
+        font-size: 24px;
+        vertical-align: middle;
+        &:hover {
+            cursor: pointer;
+            color: #FF8C42;
+        }
+    }
+    &__value {
+        width: 25px;
+        height: 32px;
+        @extend %borderInputOder;
+        text-align: center;
+    }
+}
+
+.price {
+    &__value {
+        width: 50px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 32px;
+        position: relative;
+        &::before {
+            content: "$";
+            color: var(--color, white);
+            position: absolute;
+            left: -10px;
+        }
+    }
+}
+
+.ingredients {
+    &__title {
+        position: absolute;
+        left: 0;
+        top: 0;
+        vertical-align: middle;
+        line-height: 32px;
+    }
+    &__arrow {
+        &:hover {
+            cursor: pointer;
+            background-color: #FF8C42;
+        }
+        .fa-solid {
+            font-size: 11px;
+        }
+    }
+    &__listBox {
+        border: 1px solid #FF8C42;
+        border-radius: 5px;
+        background: rgba(68, 68, 68, 1);
+        color: white;
+        width: 418px;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: left;
+        top: -100px;
+        left: -2px;
+        position: absolute;
+        padding: 16px;
+        z-index: 5;
+    }
+    &__cross {
+        position: absolute;
+        right: 9px;
+        top: 0px;
+        &:hover {
+            cursor: pointer;
+            color: #FF8C42;
+            font-size: 900;
+        }
+    }
+    li input[type='checkbox'] {
+        width: 10%;
+        height: 2em;
+        vertical-align: middle;
+        accent-color: #FF8C42;
+    }
+    &__item {
+        &:last-child {
+            margin-top: 10px;
+            text-align: center
+        }
+    }
+    &__price {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.coupon {
+    &__code {
+        width: 100px;
+        height: 32px;
+        @extend %borderInputOder;
+        text-align: center;
+    }
+    &__btn {
+        font-size: 14px;
+    }
+}
+
+.bill {
+    &__title {
+        color: #FF8C42;
+        text-transform: capitalize;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__totalBox,
+    &__delivBox,
+    &__discountBox,
+    &__taxBox,
+    &__toPayBox {
+        display: flex;
+    }
+    &__text {
+        flex: 1 0 60%;
+    }
+    &__sum {
+        position: relative;
+        &::before {
+            content: "$";
+            color: var(--color, white);
+            position: absolute;
+            left: -10px;
+        }
+    }
+    .mines {
+        &::before {
+            content: "$-"!important;
+            left: -20px !important;
+        }
+    }
+    &__finish {
+        color: #1aaf29;
+    }
+    &__btnTotal {
+        margin: 16px auto;
+    }
+}

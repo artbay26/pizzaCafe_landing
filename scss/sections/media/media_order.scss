@@ -1,0 +1,96 @@
+/*-----media Order------*/
+
+@media all and (max-width: 991px) {
+    .order {
+        &__container {
+            gap: 0% !important;
+        }
+        &__user {
+            flex: 1 0 40% !important;
+        }
+        &__details {
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+    .ingredients {
+        &__listBox {
+            width: 100% !important;
+            top: -80px !important;
+        }
+    }
+    .coupon {
+        &__btn {
+            margin-left: 16px;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .order {
+        &__container {
+            flex-direction: column;
+        }
+        &__details {
+            width: 100% !important;
+        }
+    }
+    .delivery {
+        &__location {
+            display: none;
+        }
+    }
+    .form {
+        &__pizza {
+            flex-direction: column;
+        }
+        &__btnAdd {
+            margin-top: 60px !important;
+        }
+        &__coupon {
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 16px;
+        }
+    }
+    .price {
+        &__value {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                content: "$";
+                color: var(--color, white);
+                position: absolute;
+            }
+        }
+    }
+    .ingredients {
+        &__price {
+            left: -4px;
+            top: 28px !important;
+        }
+        &__listBox {
+            font-size: 20px !important;
+            top: -100px !important;
+        }
+        &__pr {
+            font-size: 16px;
+        }
+    }
+    .coupon {
+        &__btn {
+            margin-left: 0px !important;
+            width: 65%;
+        }
+    }
+}
+
+@media all and (max-width: 320px) {
+    .ingredients {
+        &__title {
+            font-size: 0.75rem;
+        }
+    }
+}

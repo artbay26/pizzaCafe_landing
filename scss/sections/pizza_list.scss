@@ -1,0 +1,105 @@
+/*----Pizza_list---*/
+
+.pzList {
+    &__container {
+        margin-top: calc(75/16) + rem;
+        padding-bottom: 1rem;
+    }
+    &__imgBox {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+        position: relative;
+    }
+    &__wordPizza {
+        color: #FF8C42;
+    }
+    &__wordBird {
+        color: #FF8C42;
+        text-transform: uppercase;
+        font-size: calc(48/16) + rem;
+    }
+    &__imgHands {
+        width: 122%;
+    }
+    &__line {
+        flex: 1 0 26.5%;
+    }
+    &__imgLine {
+        width: 130%;
+        margin-left: -6rem;
+        margin-top: 1.8rem;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 35%;
+        padding: 1.5rem;
+        color: #FFDDC8;
+    }
+}
+
+.imgBox {
+    &__title {
+        color: white;
+        font-size: calc(32/16) + rem;
+        line-height: calc(16/16);
+        font-weight: 500;
+        text-transform: capitalize;
+        letter-spacing: 0.2rem;
+        text-align: center;
+    }
+}
+
+.content {
+    &__list {
+        font-size: calc(24/16) + rem;
+        line-height: calc(24/16);
+        font-weight: 500;
+        letter-spacing: 0.2rem;
+        margin-bottom: 3rem;
+        max-width: 345px;
+        margin-top: calc(118/16) + rem;
+        margin-left: -10rem;
+    }
+    &__item {
+        list-style: disc !important;
+        margin-bottom: 1rem;
+        &:nth-child(1) {
+            margin-left: 7.5rem;
+        }
+        &:nth-child(2) {
+            margin-left: 6rem;
+        }
+        &:nth-child(3) {
+            margin-left: 4.5rem;
+        }
+        &:nth-child(4) {
+            margin-left: 3rem;
+        }
+        &:nth-child(5) {
+            margin-left: 1.5rem;
+        }
+        &:nth-child(6) {
+            margin-right: 0px;
+        }
+    }
+    &__buttons {
+        max-width: 450px;
+        display: flex;
+        gap: 50px;
+        padding: 1rem;
+        margin-left: -7rem;
+    }
+}
+
+.button {
+    &_order {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &_showMenu {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+}
